@@ -22,6 +22,9 @@
 ```
     npm server.js
 ```
+### If it work
+![image](https://github.com/6410685173/BackendUniconnect/assets/88651105/8a6b0b19-8eab-41b3-8e41-7d2d19ec0d64)
+
 ## To access DATABASE
 Navigate to the directory sqlite
 ```
