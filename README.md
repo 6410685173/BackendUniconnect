@@ -13,6 +13,7 @@
     npm start
     ```
 
+
 for database initialization run the following command
 ```
 node table.js
