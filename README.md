@@ -1,5 +1,6 @@
 ## Prerequisites 
 [node.js](https://nodejs.org/)
+[postman(optional)](https://www.postman.com/downloads/)
 
 ## Setup
 1. Clone this repository.
