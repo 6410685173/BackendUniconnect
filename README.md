@@ -17,6 +17,7 @@
 
 for database initialization run the following command
 ```
+mkdir database
 node table.js
 ```
 
