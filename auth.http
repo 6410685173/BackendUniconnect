@@ -1,0 +1,19 @@
+# Install Rest Client extension in Vscode to try this http request sending
+
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "username": "root",
+    "password": "password",
+    "confirmPassword": "password"
+}
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username": "root",
+    "password": "passwords"
+}
