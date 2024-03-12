@@ -1,0 +1,18 @@
+# install Rest Client extension in Vscode to try this http request sending
+@port = 3000
+
+### test
+GET http://localhost:{{port}}/api/
+
+### get all courses
+GET http://localhost:{{port}}/api/courses
+
+
+### insert new course
+POST http://localhost:{{port}}/api/course
+Content-Type: application/json
+
+{
+    "courseID": "cn204",
+    "courseName": "data science"
+}
