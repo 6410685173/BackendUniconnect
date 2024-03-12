@@ -25,11 +25,12 @@ authRouter.post('/register', async (req,res) => {
         return res.status(400).json({message: "passwords do not match"})
     }
 
-    const hashedPassword = await bcrpyt.hash("password", 10)
+    const hashedPassword = await bcrpyt.hash(password, 10)
 
     sql = `INSERT INTO user(username, password) VALUES(?,?)`;
     db.run(sql,[username, hashedPassword], (err) => {
         if(err) return res.status(400).json({error: err.message})
+        console.log(`Created user: ${username}`)
         return res.status(200).json({message: `Inserted user: ${username}!`})
     })
 })
@@ -46,6 +47,7 @@ authRouter.post('/login',(req,res) => {
         if(!row) return res.status(404).json({ message: "User not found"})
         try{
             if(bcrpyt.compareSync(password, row.password)){
+                console.log(`Logged In user: ${username}`)
                 return res.status(200).json({message: "Logged In!"})
             }else{
                 return res.status(401).json({message: "Incorrect username or password"})
