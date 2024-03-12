@@ -1,6 +1,7 @@
 ## Prerequisites 
-[node.js](https://nodejs.org/)
-[postman(optional)](https://www.postman.com/downloads/)
+1. [node.js](https://nodejs.org/)
+2. [postman(optional)](https://www.postman.com/downloads/)
+3. rest client extension in Vscode(optional)
 
 ## Setup
 1. Clone this repository.
@@ -17,6 +18,7 @@
 
 for database initialization run the following command
 ```
+mkdir database
 node table.js
 ```
 

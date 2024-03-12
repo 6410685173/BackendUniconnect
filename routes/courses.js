@@ -18,6 +18,7 @@ router.use(express.json());
 // get post section
 // get test
 router.get("/", (req, res) => {
+  console.log('someone test')
   res.status(200);
   res.json({
     message: "hello world",
