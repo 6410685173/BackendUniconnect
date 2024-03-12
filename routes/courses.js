@@ -34,8 +34,8 @@ router.post("/course", (req, res) => {
     if (err) {
       console.error("Error inserting course:", err);
       return res
-        .status(400)
-        .json({ status: 400, success: false, error: err.message });
+        .status(422)
+        .json({ status: 422 , success: false, error: err.message });
     }
     console.log("Successfully input", courseID, courseName, description);
 
