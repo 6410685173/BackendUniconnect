@@ -1,6 +1,7 @@
 ## Prerequisites 
 [node.js](https://nodejs.org/)
 [postman(optional)](https://www.postman.com/downloads/)
+rest client extension in Vscode(optional)
 
 ## Setup
 1. Clone this repository.
