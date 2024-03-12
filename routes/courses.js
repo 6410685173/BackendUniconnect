@@ -1,5 +1,4 @@
 const express = require("express"); //import express
-const bodyParser = require("body-parser");
 
 const router = express.Router();
 
@@ -14,7 +13,7 @@ const db = new sqlite.Database(
 );
 let sql;
 
-router.use(bodyParser.json());
+router.use(express.json());
 
 // get post section
 // get test
@@ -35,8 +34,8 @@ router.post("/course", (req, res) => {
     if (err) {
       console.error("Error inserting course:", err);
       return res
-        .status(400)
-        .json({ status: 400, success: false, error: err.message });
+        .status(422)
+        .json({ status: 422 , success: false, error: err.message });
     }
     console.log("Successfully input", courseID, courseName, description);
 
@@ -49,16 +48,14 @@ router.post("/course", (req, res) => {
 router.get("/courses", (req, res) => {
   sql = `SELECT * FROM course`;
   db.all(sql, [], (err, rows) => {
-		console.log(rows)
     if (err) {
-      console.error("Error inserting course:", err);
+      console.error("Error: ", err);
       return res
         .status(400)
         .json({ status: 404, success: false, error: err.message });
     }
-
+    console.log("Courses Sent!")
 		return res.json({status:200, data: rows, success:true})
-
   });
 });
 

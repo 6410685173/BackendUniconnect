@@ -1,10 +1,12 @@
 const express = require("express");
-const router = require("./router");
+const courseRouter = require("./routes/courses");
+const authRouter = require("./routes/auth")
 
 const app = express();
 const PORT = 3000;
 
-app.use("/api", router);
+app.use("/api", courseRouter);
+app.use("/auth", authRouter)
 
 app.listen(PORT, (error) => {
   if (!error)
